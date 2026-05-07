@@ -18,7 +18,6 @@ def TM_baslat(m1, m2):
     adim_sayac = 1
 
     print("\n" + "="*60)
-    print("="*60)
     print(f"Başlangıç Bandı: {bant_str}\n")
 
     while state not in ['q_bitir', 'q_bitir_sifir']:
@@ -133,16 +132,13 @@ def TM_baslat(m1, m2):
     return final_bant
 
 if __name__ == "__main__":
-    print("--- Turing Makinesi İle İkili (Binary) Çarpma ---")
     carpilan = ikili_input("Birinci binary sayıyı giriniz (Çarpılan): ")
     carpan = ikili_input("İkinci binary sayıyı giriniz (Çarpan): ")
     
     final_binary = TM_baslat(carpilan, carpan)
     final_decimal = int(final_binary, 2)
-    
-    print("\n" + "="*60)
+
+    print("\n"*2)
     print(" SONUÇ")
-    print("="*60)
     print(f"Binary Sonuç  : {final_binary}")
     print(f"Decimal Sonuç : {final_decimal}")
-    print("="*60)
